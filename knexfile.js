@@ -3,9 +3,11 @@
 module.exports = {
 
   development: {
-    client: 'sqlite3',
+    client: 'pg',
     connection: {
-      filename: './dev.sqlite3'
+      database: process.env.DB_DATA,
+      user: process.env.DB_DATA,
+      password: process.env.DB_PASSWORD,
     }
   },
 
